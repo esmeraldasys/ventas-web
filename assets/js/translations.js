@@ -1,63 +1,60 @@
-// Encapsulamos todo el código en una IIFE para no contaminar el ámbito global
 (function() {
-  // Variable para almacenar en caché las traducciones cargadas
-  let translations = {};
-
-  // Función para obtener un valor de un objeto anidado usando una clave como "nav.home"
-  const getNestedTranslation = (obj, key) => {
-    return key.split('.').reduce((o, i) => (o ? o[i] : undefined), obj);
-  };
-
-  // Función asíncrona para cargar y aplicar el idioma
-  const setLanguage = async (lang) => {
-    // Si no tenemos las traducciones para este idioma, las cargamos
-    if (!translations[lang]) {
-      try {
-        const response = await fetch(`lang/${lang}.json`);
-        if (!response.ok) {
-          throw new Error(`Could not load ${lang}.json`);
-        }
-        translations[lang] = await response.json();
-      } catch (error) {
-        console.error("Error loading translation file:", error);
-        return; // No continuar si el archivo no se pudo cargar
-      }
+    // Función para obtener un valor anidado de un objeto
+    function getNestedValue(obj, path) {
+        return path.split('.').reduce((acc, part) => acc && acc[part], obj);
     }
 
-    // Aplicar las traducciones a los elementos
-    document.querySelectorAll('[data-key]').forEach(element => {
-      const key = element.getAttribute('data-key');
-      const translation = getNestedTranslation(translations[lang], key);
-      
-      if (translation) {
-        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-          element.placeholder = translation;
-        } else {
-          element.innerHTML = translation;
+    async function loadTranslations(lang) {
+        try {
+            const response = await fetch(`assets/lang/${lang}.json`);
+            if (!response.ok) {
+                throw new Error(`Could not load ${lang}.json`);
+            }
+            return await response.json();
+        } catch (error) {
+            console.error(error);
+            // Cargar idioma por defecto (inglés) en caso de error
+            const response = await fetch(`assets/lang/en.json`);
+            return await response.json();
         }
-      }
-    });
+    }
 
-    document.documentElement.lang = lang;
-    localStorage.setItem('language', lang);
-  };
-
-  // Función global para ser llamada desde el HTML
-  window.changeLanguage = (lang) => {
-    setLanguage(lang);
-  };
-
-  // Al cargar la página, determina el idioma inicial
-  document.addEventListener('DOMContentLoaded', () => {
-    let initialLang = localStorage.getItem('language');
-
-    if (!initialLang) {
-      const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-      initialLang = browserLang.startsWith('es') ? 'es' : 'en';
+    async function applyTranslations(lang) {
+        const translations = await loadTranslations(lang);
+        
+        document.querySelectorAll('[data-key]').forEach(element => {
+            const key = element.getAttribute('data-key');
+            const translation = getNestedValue(translations, key);
+            
+            if (translation) {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translation;
+                } else {
+                    element.innerHTML = translation;
+                }
+            }
+        });
+        
+        document.documentElement.lang = lang;
     }
     
-    setLanguage(initialLang);
-  });
+    // Función global para cambiar de idioma desde el HTML
+    window.changeLanguage = (lang) => {
+        localStorage.setItem('language', lang);
+        applyTranslations(lang);
+    };
+
+    // Lógica que se ejecuta al cargar la página
+    document.addEventListener('DOMContentLoaded', () => {
+        let initialLang = localStorage.getItem('language');
+
+        if (!initialLang) {
+            const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+            initialLang = browserLang.startsWith('es') ? 'es' : 'en';
+        }
+        
+        applyTranslations(initialLang);
+    });
 
 })();
 
