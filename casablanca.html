@@ -9,7 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" />
+
     <!-- Fuentes y Estilos Personalizados -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"></noscript>
@@ -17,49 +20,20 @@
 </head>
 <body class="theme-casablanca">
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
-            <div class="container">
-                <a class="navbar-brand fw-bold text-secondary" href="index.html">CASA BLANCA GOLF & VILLAS</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html" data-key="nav.home"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-key="nav.agents"></a>
-                        </li>
-                        <li class="nav-item mt-2 mt-lg-0">
-                            <a class="nav-link btn btn-outline-primary ms-lg-2 px-3" href="#formulariocontacto" data-key="nav.contact"></a>
-                        </li>
-                        <li class="nav-item dropdown ms-lg-2">
-                          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-globe"></i>
-                          </a>
-                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('es')">Español</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
-                          </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <header id="header-placeholder"></header>
 
     <main class="main-content">
         <div class="container py-5" data-aos="fade-in">
-            <div class="row g-2">
-                <div class="col-12">
-                    <img src="imagenes/moderno.jpg" alt="Vista principal de la propiedad" class="img-fluid rounded shadow-sm w-100" loading="lazy">
-                </div>
-                <div class="col-3"><img src="imagenes/condosala.jpg" alt="Sala de estar" class="img-fluid rounded shadow-sm" loading="lazy"></div>
-                <div class="col-3"><img src="imagenes/condococina.jpg" alt="Cocina moderna" class="img-fluid rounded shadow-sm" loading="lazy"></div>
-                <div class="col-3"><img src="imagenes/condohabitacion.jpg" alt="Habitación principal" class="img-fluid rounded shadow-sm" loading="lazy"></div>
-                <div class="col-3"><img src="imagenes/condobaño.jpg" alt="Baño elegante" class="img-fluid rounded shadow-sm" loading="lazy"></div>
+            <!-- Galería Interactiva -->
+            <div id="lightgallery" class="row g-2">
+                <a href="imagenes/casablanca/moderno.jpg" class="col-12">
+                    <img src="imagenes/casablanca/moderno.jpg" alt="Vista principal de la propiedad" class="img-fluid rounded shadow-sm w-100" loading="lazy">
+                </a>
+                <!-- Miniaturas -->
+                <a href="imagenes/casablanca/condosala.jpg" class="col-3"><img src="imagenes/casablanca/condosala.jpg" alt="Sala de estar" class="img-fluid rounded shadow-sm" loading="lazy"></a>
+                <a href="imagenes/casablanca/condococina.jpg" class="col-3"><img src="imagenes/casablanca/condococina.jpg" alt="Cocina moderna" class="img-fluid rounded shadow-sm" loading="lazy"></a>
+                <a href="imagenes/casablanca/condohabitacion.jpg" class="col-3"><img src="imagenes/casablanca/condohabitacion.jpg" alt="Habitación principal" class="img-fluid rounded shadow-sm" loading="lazy"></a>
+                <a href="imagenes/casablanca/condobaño.jpg" class="col-3"><img src="imagenes/casablanca/condobaño.jpg" alt="Baño elegante" class="img-fluid rounded shadow-sm" loading="lazy"></a>
             </div>
         </div>
 
@@ -120,24 +94,17 @@
         </section>
     </main>
 
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p class="mb-2" data-key="footer.rights"></p>
-        </div>
-    </footer>
+    <footer id="footer-placeholder" class="bg-dark text-white text-center py-4"></footer>
 
     <!-- Librerías JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js"></script>
     <script src="translations.js"></script>
+    <script src="main.js"></script>
     
-    <!-- Script de Inicialización -->
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-        });
-    </script>
 </body>
 </html>
 
