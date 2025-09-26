@@ -1,0 +1,135 @@
+/* =========================================
+   TEMAS DE COLOR Y VARIABLES GENERALES
+   ========================================= */
+
+/* Tema por defecto: NNA Luxury (Dorado y Azul Noche) */
+.theme-nna {
+    --bs-primary: #d4af37; 
+    --bs-secondary: #0a2d4d;
+    --bs-primary-rgb: 212, 175, 55;
+    --bs-secondary-rgb: 10, 45, 77;
+}
+
+/* Tema para Esmeralda (Verde Esmeralda y Azul Marino) */
+.theme-esmeralda {
+    --bs-primary: #009B77;
+    --bs-secondary: #00425A;
+    --bs-primary-rgb: 0, 155, 119;
+    --bs-secondary-rgb: 0, 66, 90;
+}
+
+/* Tema para Casa Blanca (Verde Golf y Azul Cielo) */
+.theme-casablanca {
+    --bs-primary: #4CAF50;
+    --bs-secondary: #0077C0;
+    --bs-primary-rgb: 76, 175, 80;
+    --bs-secondary-rgb: 0, 119, 192;
+}
+
+/* =========================================
+   ESTILOS GENERALES
+   ========================================= */
+body {
+    padding-top: 56px; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* =========================================
+   ESTILOS DE COMPONENTES DE BOOTSTRAP (Usan las variables de tema)
+   ========================================= */
+.btn-primary {
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: color-mix(in srgb, var(--bs-primary), black 10%);
+    --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-primary), black 10%);
+}
+
+.btn-secondary {
+    --bs-btn-bg: var(--bs-secondary);
+    --bs-btn-border-color: var(--bs-secondary);
+    --bs-btn-hover-bg: color-mix(in srgb, var(--bs-secondary), black 10%);
+    --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-secondary), black 10%);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: var(--bs-primary);
+    --bs-btn-hover-border-color: var(--bs-primary);
+    --bs-btn-hover-color: #fff;
+}
+
+.property-price {
+    color: var(--bs-primary);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+.text-secondary {
+    color: var(--bs-secondary) !important;
+}
+
+/* =========================================
+   ESTILOS DE LA SECCIÓN HERO (SWIPER)
+   ========================================= */
+.hero-section {
+    height: 90vh;
+    width: 100%;
+}
+
+.swiper, .swiper-slide {
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    max-width: 90%;
+}
+
+/* =========================================
+   ICONOS DE AMENIDADES MEJORADOS
+   ========================================= */
+.amenity-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(var(--bs-secondary-rgb), 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.amenity-icon-wrapper i {
+    color: var(--bs-secondary);
+    transition: color 0.3s ease;
+}
+
+.col-md-4:hover .amenity-icon-wrapper {
+    background-color: var(--bs-secondary);
+    transform: scale(1.1);
+}
+
+.col-md-4:hover .amenity-icon-wrapper i {
+    color: #fff;
+}
+
