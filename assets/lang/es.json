@@ -7,11 +7,22 @@
     "agents": "Agentes"
   },
   "buttons": {
-    "viewDetails": "Ver Detalles",
-    "sendMessage": "Enviar Mensaje",
-    "exploreArea": "Conocer la Zona",
+    "viewProperties": "Ver Propiedades",
     "discoverAmenities": "Descubrir Amenidades",
-    "viewProperties": "Ver Propiedades"
+    "exploreArea": "Conocer la Zona",
+    "viewDetails": "Ver Detalles",
+    "sendMessage": "Enviar Mensaje"
+  },
+  "form": {
+    "name": "Nombre Completo",
+    "email": "Correo Electrónico",
+    "phone": "Número de Teléfono",
+    "message": "¿En qué propiedad estás interesado?"
+  },
+  "footer": {
+    "address": "Blvd. Paseo de la Duna, Puerto Peñasco, Sonora, México",
+    "contact": "Teléfono: (555) 123-4567 | Email: ventas@nnaluxury.com",
+    "rights": "© 2025 NNA LUXURY. Todos los derechos reservados."
   },
   "mainPage": {
     "hero": {
@@ -67,8 +78,7 @@
     "title": "Villa de Lujo con Vista al Mar",
     "features": {
       "beds": "Habitaciones",
-      "baths": "Baños",
-      "garages": "Garajes"
+      "baths": "Baños"
     },
     "description": {
       "title": "Descripción",
@@ -84,16 +94,5 @@
     "agentCard": {
       "title": "Contactar al Agente"
     }
-  },
-  "form": {
-    "name": "Nombre Completo",
-    "email": "Correo Electrónico",
-    "phone": "Número de Teléfono",
-    "message": "¿En qué propiedad estás interesado?"
-  },
-  "footer": {
-    "address": "Blvd. Paseo de la Duna, Puerto Peñasco, Sonora, México",
-    "contact": "Teléfono: (555) 123-4567 | Email: ventas@nnaluxury.com",
-    "rights": "© 2025 NNA LUXURY. Todos los derechos reservados."
   }
 }

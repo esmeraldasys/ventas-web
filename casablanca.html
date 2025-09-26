@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CASA BLANCA GOLF & VILLAS - NNA LUXURY</title>
+    <title>Casa Blanca Golf & Villas | Propiedades en Venta - NNA Luxury</title>
+    <meta name="description" content="Descubra Casa Blanca Golf & Villas. Propiedades exclusivas con 2 habitaciones y 2 baños en una de las zonas más prestigiosas de Puerto Peñasco.">
 
-    <!-- Favicons en nueva ruta -->
-    <link rel="icon" href="assets/images/ui/favicon.ico" sizes="any">
-    <link rel="icon" href="assets/images/ui/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="assets/images/ui/apple-touch-icon.png">
-    <link rel="manifest" href="assets/images/ui/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="icon" href="imagenes/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="imagenes/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="imagenes/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="imagenes/favicon/site.webmanifest">
 
     <!-- Librerías CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,27 +20,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" />
 
-    <!-- Fuentes y Estilos Personalizados en nueva ruta -->
+    <!-- Fuentes y Estilos Personalizados -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"></noscript>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="theme-casablanca">
 
-    <header id="header-placeholder"></header>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-secondary" href="index.html">CASA BLANCA GOLF & VILLAS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" data-key="nav.home"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-key="nav.agents"></a>
+                        </li>
+                        <li class="nav-item mt-2 mt-lg-0">
+                            <a class="nav-link btn btn-outline-primary ms-lg-2 px-3" href="#formulariocontacto" data-key="nav.contact"></a>
+                        </li>
+                        <li class="nav-item dropdown ms-lg-2">
+                          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('es')">Español</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
+                          </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main class="main-content">
         <div class="container py-5" data-aos="fade-in">
-            <!-- Galería Interactiva con nuevas rutas -->
             <div id="lightgallery" class="row g-2">
-                <a href="assets/images/developments/casablanca/moderno.jpg" class="col-12">
-                    <img src="assets/images/developments/casablanca/moderno.jpg" alt="Vista principal de la propiedad" class="img-fluid rounded shadow-sm w-100" loading="lazy">
+                <a href="imagenes/moderno.jpg" class="col-12">
+                    <img src="imagenes/moderno.jpg" alt="Vista principal de la propiedad en Casa Blanca" class="img-fluid rounded shadow-sm w-100" loading="lazy">
                 </a>
-                <!-- Miniaturas -->
-                <a href="assets/images/developments/casablanca/condosala.jpg" class="col-3"><img src="assets/images/developments/casablanca/condosala.jpg" alt="Sala de estar" class="img-fluid rounded shadow-sm" loading="lazy"></a>
-                <a href="assets/images/developments/casablanca/condococina.jpg" class="col-3"><img src="assets/images/developments/casablanca/condococina.jpg" alt="Cocina moderna" class="img-fluid rounded shadow-sm" loading="lazy"></a>
-                <a href="assets/images/developments/casablanca/condohabitacion.jpg" class="col-3"><img src="assets/images/developments/casablanca/condohabitacion.jpg" alt="Habitación principal" class="img-fluid rounded shadow-sm" loading="lazy"></a>
-                <a href="assets/images/developments/casablanca/condobaño.jpg" class="col-3"><img src="assets/images/developments/casablanca/condobaño.jpg" alt="Baño elegante" class="img-fluid rounded shadow-sm" loading="lazy"></a>
+                <a href="imagenes/condosala.jpg" class="col-3"><img src="imagenes/condosala.jpg" alt="Sala de estar del condominio Casa Blanca" class="img-fluid rounded shadow-sm" loading="lazy"></a>
+                <a href="imagenes/condococina.jpg" class="col-3"><img src="imagenes/condococina.jpg" alt="Cocina moderna del condominio Casa Blanca" class="img-fluid rounded shadow-sm" loading="lazy"></a>
+                <a href="imagenes/condohabitacion.jpg" class="col-3"><img src="imagenes/condohabitacion.jpg" alt="Habitación principal del condominio Casa Blanca" class="img-fluid rounded shadow-sm" loading="lazy"></a>
+                <a href="imagenes/condobaño.jpg" class="col-3"><img src="imagenes/condobaño.jpg" alt="Baño elegante del condominio Casa Blanca" class="img-fluid rounded shadow-sm" loading="lazy"></a>
             </div>
         </div>
 
@@ -81,7 +111,7 @@
                                 <p class="text-muted small"><i class="fas fa-phone"></i> +1 987 654 321</p>
                             </div>
                             <hr>
-                            <form>
+                            <form id="contactForm">
                                 <div class="mb-3">
                                     <input type="text" class="form-control" placeholder="Nombre Completo" required data-key="form.name">
                                 </div>
@@ -93,6 +123,7 @@
                                 </div>
                                 <button type="submit" class="btn btn-primary w-100" data-key="buttons.sendMessage"></button>
                             </form>
+                            <div id="form-feedback" class="mt-3"></div>
                         </aside>
                     </div>
                 </div>
@@ -100,17 +131,51 @@
         </section>
     </main>
 
-    <footer id="footer-placeholder" class="bg-dark text-white text-center py-4"></footer>
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-2" data-key="footer.rights"></p>
+        </div>
+    </footer>
 
-    <!-- Librerías JS en nueva ruta -->
+    <!-- Librerías JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js"></script>
-    <script src="assets/js/translations.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="translations.js"></script>
     
+    <!-- Script de Inicialización -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({
+                duration: 800, 
+                once: true,    
+            });
+
+            if (document.getElementById('lightgallery')) {
+                lightGallery(document.getElementById('lightgallery'), {
+                    plugins: [lgZoom, lgThumbnail],
+                    speed: 500,
+                    download: false
+                });
+            }
+
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const feedbackDiv = document.getElementById('form-feedback');
+                    const successMessage = document.documentElement.lang === 'es' 
+                        ? '¡Gracias! Tu mensaje ha sido enviado.' 
+                        : 'Thank you! Your message has been sent.';
+                    feedbackDiv.innerHTML = `<div class="alert alert-success">${successMessage}</div>`;
+                    contactForm.reset();
+                    setTimeout(() => { feedbackDiv.innerHTML = ''; }, 5000);
+                });
+            }
+        });
+    </script>
 </body>
 </html>
 

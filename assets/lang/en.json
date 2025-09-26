@@ -7,11 +7,22 @@
     "agents": "Agents"
   },
   "buttons": {
-    "viewDetails": "View Details",
-    "sendMessage": "Send Message",
-    "exploreArea": "Explore the Area",
+    "viewProperties": "View Properties",
     "discoverAmenities": "Discover Amenities",
-    "viewProperties": "View Properties"
+    "exploreArea": "Explore the Area",
+    "viewDetails": "View Details",
+    "sendMessage": "Send Message"
+  },
+  "form": {
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Which property are you interested in?"
+  },
+  "footer": {
+    "address": "Blvd. Paseo de la Duna, Puerto Peñasco, Sonora, Mexico",
+    "contact": "Phone: (555) 123-4567 | Email: sales@nnaluxury.com",
+    "rights": "© 2025 NNA LUXURY. All rights reserved."
   },
   "mainPage": {
     "hero": {
@@ -67,8 +78,7 @@
     "title": "Luxury Villa with Ocean View",
     "features": {
       "beds": "Bedrooms",
-      "baths": "Bathrooms",
-      "garages": "Garages"
+      "baths": "Bathrooms"
     },
     "description": {
       "title": "Description",
@@ -84,16 +94,5 @@
     "agentCard": {
       "title": "Contact Agent"
     }
-  },
-  "form": {
-    "name": "Full Name",
-    "email": "Email Address",
-    "phone": "Phone Number",
-    "message": "Which property are you interested in?"
-  },
-  "footer": {
-    "address": "Blvd. Paseo de la Duna, Puerto Peñasco, Sonora, Mexico",
-    "contact": "Phone: (555) 123-4567 | Email: sales@nnaluxury.com",
-    "rights": "© 2025 NNA LUXURY. All rights reserved."
   }
 }

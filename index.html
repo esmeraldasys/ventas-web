@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NNA LUXURY - Venta de Condominios en Puerto Peñasco</title>
+    <title>NNA LUXURY - Condominios de Lujo en Venta en Puerto Peñasco</title>
+    <meta name="description" content="Descubra propiedades y condominios exclusivos frente al mar en Puerto Peñasco, Sonora. NNA Luxury le ofrece un estilo de vida inigualable.">
 
-    <!-- Favicons en nueva ruta -->
-    <link rel="icon" href="assets/images/ui/favicon.ico" sizes="any">
-    <link rel="icon" href="assets/images/ui/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="assets/images/ui/apple-touch-icon.png">
-    <link rel="manifest" href="assets/images/ui/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="icon" href="imagenes/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="imagenes/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="imagenes/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="imagenes/favicon/site.webmanifest">
 
     <!-- Librerías CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,34 +18,68 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <!-- Fuentes y Estilos Personalizados en nueva ruta -->
+    <!-- Fuentes y Estilos Personalizados -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"></noscript>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="theme-nna">
 
-    <header id="header-placeholder"></header>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">NNA LUXURY</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" data-key="nav.home"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#propiedades" data-key="nav.properties"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#amenidades" data-key="nav.amenities"></a>
+                        </li>
+                        <li class="nav-item mt-2 mt-lg-0">
+                            <a class="nav-link btn btn-outline-primary ms-lg-2 px-3" href="#contacto" data-key="nav.contact"></a>
+                        </li>
+                        <li class="nav-item dropdown ms-lg-2">
+                            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage('es')">Español</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main>
         <section class="hero-section">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image: url('assets/images/developments/esmeralda/pool1.jpg');">
+                    <div class="swiper-slide" style="background-image: url('imagenes/pool1.jpg');">
                         <div class="hero-content text-center text-white" data-aos="fade-in" data-aos-delay="200">
                             <h1 class="display-4 fw-bold" data-key="mainPage.hero.slide1.title"></h1>
                             <p class="lead" data-key="mainPage.hero.slide1.subtitle"></p>
                             <a href="#propiedades" class="btn btn-primary btn-lg" data-key="buttons.viewProperties"></a>
                         </div>
                     </div>
-                    <div class="swiper-slide" style="background-image: url('assets/images/developments/esmeralda/pool2.jpg');">
+                    <div class="swiper-slide" style="background-image: url('imagenes/pool2.jpg');">
                         <div class="hero-content text-center text-white">
                             <h1 class="display-4 fw-bold" data-key="mainPage.hero.slide2.title"></h1>
                             <p class="lead" data-key="mainPage.hero.slide2.subtitle"></p>
                             <a href="#amenidades" class="btn btn-primary btn-lg" data-key="buttons.discoverAmenities"></a>
                         </div>
                     </div>
-                    <div class="swiper-slide" style="background-image: url('assets/images/developments/casablanca/gym3.jpg');">
+                    <div class="swiper-slide" style="background-image: url('imagenes/gym3.jpg');">
                          <div class="hero-content text-center text-white">
                             <h1 class="display-4 fw-bold" data-key="mainPage.hero.slide3.title"></h1>
                             <p class="lead" data-key="mainPage.hero.slide3.subtitle"></p>
@@ -64,7 +99,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="card h-100 shadow-sm border-0">
-                            <img src="assets/images/developments/esmeralda/vistamar.jpg" class="card-img-top" alt="Condominio con vista al mar" loading="lazy">
+                            <img src="imagenes/vistamar.jpg" class="card-img-top" alt="Condominio con vista al mar en Esmeralda Beach Resort" loading="lazy">
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title h5" data-key="mainPage.properties.prop1.title"></h3>
                                 <p class="card-text property-price fw-bold">$750,000 USD</p>
@@ -75,7 +110,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                         <div class="card h-100 shadow-sm border-0">
-                            <img src="assets/images/developments/casablanca/moderno.jpg" class="card-img-top" alt="Condominio moderno" loading="lazy">
+                            <img src="imagenes/moderno.jpg" class="card-img-top" alt="Moderno condominio en Casa Blanca Golf & Villas" loading="lazy">
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title h5" data-key="mainPage.properties.prop2.title"></h3>
                                 <p class="card-text property-price fw-bold">$480,000 USD</p>
@@ -86,7 +121,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
                         <div class="card h-100 shadow-sm border-0">
-                            <img src="assets/images/developments/sansebastian/unidadfamiliar.jpg" class="card-img-top" alt="Unidad familiar" loading="lazy">
+                            <img src="imagenes/unidadfamiliar.jpg" class="card-img-top" alt="Unidad familiar en San Sebastian" loading="lazy">
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title h5" data-key="mainPage.properties.prop3.title"></h3>
                                 <p class="card-text property-price fw-bold">$520,000 USD</p>
@@ -134,7 +169,7 @@
                     <div class="col-lg-8">
                         <h2 class="text-center mb-3" data-key="mainPage.contact.title"></h2>
                         <p class="text-center text-muted mb-4" data-key="mainPage.contact.subtitle"></p>
-                        <form action="#" method="POST">
+                        <form id="contactForm" action="#" method="POST">
                             <div class="mb-3">
                                 <input type="text" class="form-control" name="nombre" required data-key="form.name">
                             </div>
@@ -149,20 +184,83 @@
                             </div>
                             <button type="submit" class="btn btn-primary w-100" data-key="buttons.sendMessage"></button>
                         </form>
+                        <div id="form-feedback" class="mt-3"></div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer id="footer-placeholder" class="bg-dark text-white text-center py-4"></footer>
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-1 fw-bold">NNA LUXURY</p>
+            <p class="mb-1" data-key="footer.address"></p>
+            <p class="mb-2" data-key="footer.contact"></p>
+            <p class="mb-0 small" data-key="footer.rights"></p>
+        </div>
+    </footer>
 
-    <!-- Librerías JS en nueva ruta -->
+    <!-- Librerías JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="assets/js/translations.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="translations.js"></script>
+
+    <!-- Scripts de Inicialización -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Inicializar Swiper
+            var swiper = new Swiper(".mySwiper", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                effect: "fade",
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            // Inicializar AOS (Animate on Scroll)
+            AOS.init({
+                duration: 800, 
+                once: true,    
+            });
+
+             // Lógica para resaltar el enlace de navegación activo
+            const currentPage = window.location.pathname.split("/").pop() || "index.html";
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                const linkPage = link.getAttribute('href').split("/").pop();
+                if ((currentPage === "index.html" || currentPage === "") && (linkPage === "index.html" || linkPage === "")) {
+                    link.classList.add('active');
+                } else if (linkPage !== "" && currentPage.includes(linkPage)) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Lógica para el feedback del formulario
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault(); 
+                    const feedbackDiv = document.getElementById('form-feedback');
+                    const successMessage = document.documentElement.lang === 'es' 
+                        ? '¡Gracias! Tu mensaje ha sido enviado.' 
+                        : 'Thank you! Your message has been sent.';
+                    feedbackDiv.innerHTML = `<div class="alert alert-success">${successMessage}</div>`;
+                    contactForm.reset();
+                    setTimeout(() => { feedbackDiv.innerHTML = ''; }, 5000);
+                });
+            }
+        });
+    </script>
     
 </body>
 </html>
