@@ -1,0 +1,99 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "properties": "Propiedades",
+    "amenities": "Amenidades",
+    "contact": "Contacto",
+    "agents": "Agentes"
+  },
+  "buttons": {
+    "viewDetails": "Ver Detalles",
+    "sendMessage": "Enviar Mensaje",
+    "exploreArea": "Conocer la Zona",
+    "discoverAmenities": "Descubrir Amenidades",
+    "viewProperties": "Ver Propiedades"
+  },
+  "mainPage": {
+    "hero": {
+      "slide1": {
+        "title": "Tu Paraíso Frente al Mar te Espera",
+        "subtitle": "Descubre un estilo de vida exclusivo en Puerto Peñasco."
+      },
+      "slide2": {
+        "title": "Amenidades de Lujo",
+        "subtitle": "Albercas, gimnasio y seguridad 24/7."
+      },
+      "slide3": {
+        "title": "Vive en Puerto Peñasco",
+        "subtitle": "El destino perfecto para tu nueva vida."
+      }
+    },
+    "properties": {
+      "title": "Propiedades",
+      "prop1": {
+        "title": "Esmeralda Beach Resort",
+        "details": "3 Recámaras | 4 Baños | 280 m²"
+      },
+      "prop2": {
+        "title": "Casa Blanca Golf & Villas",
+        "details": "2 Recámaras | 2 Baños | 150 m²"
+      },
+      "prop3": {
+        "title": "San Sebastian",
+        "details": "3 Recámaras | 2.5 Baños | 190 m²"
+      }
+    },
+    "amenities": {
+      "title": "Un Estilo de Vida Incomparable",
+      "amenity1": {
+        "title": "Alberca y Río Lento",
+        "desc": "Relájate con vistas espectaculares al Mar de Cortés."
+      },
+      "amenity2": {
+        "title": "Gimnasio Equipado",
+        "desc": "Mantente en forma sin salir de casa."
+      },
+      "amenity3": {
+        "title": "Seguridad 24/7",
+        "desc": "Vive con total tranquilidad y privacidad."
+      }
+    },
+    "contact": {
+      "title": "Solicita Más Información",
+      "subtitle": "Déjanos tus datos y un asesor se pondrá en contacto contigo."
+    }
+  },
+  "propertyPage": {
+    "title": "Villa de Lujo con Vista al Mar",
+    "features": {
+      "beds": "Habitaciones",
+      "baths": "Baños",
+      "garages": "Garajes"
+    },
+    "description": {
+      "title": "Descripción",
+      "text": "Esta impresionante villa de lujo ofrece vistas panorámicas al mar y está ubicada en una de las zonas más exclusivas. Con un diseño moderno y acabados de alta calidad, esta propiedad es perfecta para quienes buscan confort y estilo."
+    },
+    "amenities": {
+      "title": "Comodidades",
+      "pool": "Piscina Privada",
+      "garden": "Jardín Exuberante",
+      "security": "Sistema de Seguridad 24/7",
+      "ac": "Aire Acondicionado Central"
+    },
+    "agentCard": {
+      "title": "Contactar al Agente"
+    }
+  },
+  "form": {
+    "name": "Nombre Completo",
+    "email": "Correo Electrónico",
+    "phone": "Número de Teléfono",
+    "message": "¿En qué propiedad estás interesado?"
+  },
+  "footer": {
+    "address": "Blvd. Paseo de la Duna, Puerto Peñasco, Sonora, México",
+    "contact": "Teléfono: (555) 123-4567 | Email: ventas@nnaluxury.com",
+    "rights": "© 2025 NNA LUXURY. Todos los derechos reservados."
+  }
+}

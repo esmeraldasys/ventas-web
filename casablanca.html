@@ -27,13 +27,13 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-center">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html" data-key="navHome">Inicio</a>
+                            <a class="nav-link" href="index.html" data-key="nav.home"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-key="navAgents">Agentes</a>
+                            <a class="nav-link" href="#" data-key="nav.agents"></a>
                         </li>
                         <li class="nav-item mt-2 mt-lg-0">
-                            <a class="nav-link btn btn-outline-primary ms-lg-2 px-3" href="#formulariocontacto" data-key="navContact">Contacto</a>
+                            <a class="nav-link btn btn-outline-primary ms-lg-2 px-3" href="#formulariocontacto" data-key="nav.contact"></a>
                         </li>
                         <li class="nav-item dropdown ms-lg-2">
                           <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -67,30 +67,27 @@
             <div class="container" data-aos="fade-up">
                 <div class="row">
                     <div class="col-lg-8">
-                        <h1 class="fw-bold text-secondary" data-key="propertyTitle">Villa de Lujo con Vista al Mar</h1>
+                        <h1 class="fw-bold text-secondary" data-key="propertyPage.title"></h1>
                         <p class="price display-6 fw-bold mb-4">$480,000 USD</p>
                         
                         <div class="d-flex flex-wrap gap-4 fs-5 mb-4 text-secondary">
-                            <span><i class="fas fa-bed me-2"></i> 2 <span data-key="featureBeds">Habitaciones</span></span>
-                            <span><i class="fas fa-bath me-2"></i> 2 <span data-key="featureBaths">Baños</span></span>
+                            <span><i class="fas fa-bed me-2"></i> 2 <span data-key="propertyPage.features.beds"></span></span>
+                            <span><i class="fas fa-bath me-2"></i> 2 <span data-key="propertyPage.features.baths"></span></span>
                             <span><i class="fas fa-ruler-combined me-2"></i> 150 m²</span>
                         </div>
 
                         <div class="description mb-4">
-                            <h2 class="h4 fw-bold text-secondary" data-key="descriptionTitle">Descripción</h2>
-                            <p data-key="propertyDescription">
-                               Esta impresionante villa de lujo ofrece vistas panorámicas al mar y está ubicada en una de las zonas más exclusivas. 
-                                Con un diseño moderno y acabados de alta calidad, esta propiedad es perfecta para quienes buscan confort y estilo.
-                            </p>
+                            <h2 class="h4 fw-bold text-secondary" data-key="propertyPage.description.title"></h2>
+                            <p data-key="propertyPage.description.text"></p>
                         </div>
                         
                         <div class="amenities">
-                            <h2 class="h4 fw-bold text-secondary" data-key="amenitiesListTitle">Comodidades</h2>
+                            <h2 class="h4 fw-bold text-secondary" data-key="propertyPage.amenities.title"></h2>
                             <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="amenityPool">Piscina Privada</span></li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="amenityGarden">Jardín Exuberante</span></li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="amenitySecurity">Sistema de Seguridad 24/7</span></li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="amenityAC">Aire Acondicionado Central</span></li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="propertyPage.amenities.pool"></span></li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="propertyPage.amenities.garden"></span></li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="propertyPage.amenities.security"></span></li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="propertyPage.amenities.ac"></span></li>
                             </ul>
                         </div>
                     </div>
@@ -99,22 +96,22 @@
                         <aside class="card shadow-sm border-0 p-4 sticky-top" style="top: 80px;">
                             <div class="text-center">
                                 <img src="https://via.placeholder.com/100" alt="Foto del Agente" class="rounded-circle mb-3" loading="lazy">
-                                <h3 class="h5 mb-1 text-secondary" data-key="agentCardTitle">Contactar al Agente</h3>
+                                <h3 class="h5 mb-1 text-secondary" data-key="propertyPage.agentCard.title"></h3>
                                 <p class="mb-1"><strong>John Doe</strong></p>
                                 <p class="text-muted small"><i class="fas fa-phone"></i> +1 987 654 321</p>
                             </div>
                             <hr>
                             <form>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Nombre Completo" required data-key="formName">
+                                    <input type="text" class="form-control" placeholder="Nombre Completo" required data-key="form.name">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" placeholder="Correo Electrónico" required data-key="formEmail">
+                                    <input type="email" class="form-control" placeholder="Correo Electrónico" required data-key="form.email">
                                 </div>
                                 <div class="mb-3">
-                                    <textarea class="form-control" placeholder="Mensaje" rows="4" required data-key="formMessage"></textarea>
+                                    <textarea class="form-control" placeholder="Mensaje" rows="4" required data-key="form.message"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100" data-key="formButton">Enviar Mensaje</button>
+                                <button type="submit" class="btn btn-primary w-100" data-key="buttons.sendMessage"></button>
                             </form>
                         </aside>
                     </div>
@@ -125,7 +122,7 @@
 
     <footer class="bg-dark text-white text-center py-4">
         <div class="container">
-            <p class="mb-2" data-key="footerRights">&copy; 2025 NNA LUXURY. Todos los derechos reservados.</p>
+            <p class="mb-2" data-key="footer.rights"></p>
         </div>
     </footer>
 

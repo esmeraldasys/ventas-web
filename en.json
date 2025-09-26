@@ -1,0 +1,99 @@
+{
+  "nav": {
+    "home": "Home",
+    "properties": "Properties",
+    "amenities": "Amenities",
+    "contact": "Contact",
+    "agents": "Agents"
+  },
+  "buttons": {
+    "viewDetails": "View Details",
+    "sendMessage": "Send Message",
+    "exploreArea": "Explore the Area",
+    "discoverAmenities": "Discover Amenities",
+    "viewProperties": "View Properties"
+  },
+  "mainPage": {
+    "hero": {
+      "slide1": {
+        "title": "Your Paradise by the Sea Awaits",
+        "subtitle": "Discover an exclusive lifestyle in Puerto Peñasco."
+      },
+      "slide2": {
+        "title": "Luxury Amenities",
+        "subtitle": "Pools, gym, and 24/7 security."
+      },
+      "slide3": {
+        "title": "Live in Puerto Peñasco",
+        "subtitle": "The perfect destination for your new life."
+      }
+    },
+    "properties": {
+      "title": "Properties",
+      "prop1": {
+        "title": "Esmeralda Beach Resort",
+        "details": "3 Bedrooms | 4 Bathrooms | 280 m²"
+      },
+      "prop2": {
+        "title": "Casa Blanca Golf & Villas",
+        "details": "2 Bedrooms | 2 Bathrooms | 150 m²"
+      },
+      "prop3": {
+        "title": "San Sebastian",
+        "details": "3 Bedrooms | 2.5 Bathrooms | 190 m²"
+      }
+    },
+    "amenities": {
+      "title": "An Unparalleled Lifestyle",
+      "amenity1": {
+        "title": "Pool & Lazy River",
+        "desc": "Relax with spectacular views of the Sea of Cortez."
+      },
+      "amenity2": {
+        "title": "Equipped Gym",
+        "desc": "Stay in shape without leaving home."
+      },
+      "amenity3": {
+        "title": "24/7 Security",
+        "desc": "Live with total peace of mind and privacy."
+      }
+    },
+    "contact": {
+      "title": "Request More Information",
+      "subtitle": "Leave us your details and an advisor will contact you shortly."
+    }
+  },
+  "propertyPage": {
+    "title": "Luxury Villa with Ocean View",
+    "features": {
+      "beds": "Bedrooms",
+      "baths": "Bathrooms",
+      "garages": "Garages"
+    },
+    "description": {
+      "title": "Description",
+      "text": "This stunning luxury villa offers panoramic ocean views and is located in one of the most exclusive areas. With a modern design and high-quality finishes, this property is perfect for those seeking comfort and style."
+    },
+    "amenities": {
+      "title": "Amenities",
+      "pool": "Private Pool",
+      "garden": "Lush Garden",
+      "security": "24/7 Security System",
+      "ac": "Central Air Conditioning"
+    },
+    "agentCard": {
+      "title": "Contact Agent"
+    }
+  },
+  "form": {
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Which property are you interested in?"
+  },
+  "footer": {
+    "address": "Blvd. Paseo de la Duna, Puerto Peñasco, Sonora, Mexico",
+    "contact": "Phone: (555) 123-4567 | Email: sales@nnaluxury.com",
+    "rights": "© 2025 NNA LUXURY. All rights reserved."
+  }
+}
