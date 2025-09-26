@@ -191,16 +191,19 @@ body {
 
 
 /* =========================================
-   ESTILOS DEL CHATBOT (DISEÑO FLOTANTE)
+   ESTILOS DEL CHATBOT (DISEÑO FLOTANTE) - VERSIÓN CORREGIDA
    ========================================= */
-.chatbot-container {
-    position: fixed;
+
+/* Usamos un ID (#nna-chatbot-container) para asegurar que estos estilos tengan prioridad 
+   y el chatbot se posicione correctamente sobre el resto de la página. */
+#nna-chatbot-container {
+    position: fixed; /* Fija el chatbot a la ventana del navegador */
     bottom: 25px;
     right: 25px;
-    z-index: 1050;
+    z-index: 1050;   /* Se asegura de que esté por encima de otros elementos */
 }
 
-.chatbot-button {
+#nna-chatbot-container .chatbot-button {
     width: 60px;
     height: 60px;
     background-color: var(--bs-primary);
@@ -215,12 +218,12 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.chatbot-button:hover {
+#nna-chatbot-container .chatbot-button:hover {
     transform: scale(1.1);
     background-color: color-mix(in srgb, var(--bs-primary), black 10%);
 }
 
-.chatbot-window {
+#nna-chatbot-container .chatbot-window {
     width: 370px;
     max-width: 90vw;
     max-height: 550px;
@@ -237,13 +240,13 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.chatbot-window.open {
+#nna-chatbot-container .chatbot-window.open {
     display: flex;
     opacity: 1;
     transform: translateY(0);
 }
 
-.chatbot-header {
+#nna-chatbot-container .chatbot-header {
     background-color: var(--bs-secondary);
     color: white;
     padding: 1rem;
@@ -257,7 +260,7 @@ body {
     min-height: 80px;
 }
 
-.chatbot-avatar {
+#nna-chatbot-container .chatbot-avatar {
     position: absolute;
     left: 20px;
     top: -25px; /* Efecto flotante */
@@ -269,13 +272,13 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.chatbot-avatar img {
+#nna-chatbot-container .chatbot-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.chatbot-close-btn {
+#nna-chatbot-container .chatbot-close-btn {
     background: none;
     border: none;
     color: white;
@@ -286,11 +289,11 @@ body {
     transition: opacity 0.2s ease;
     align-self: flex-start;
 }
-.chatbot-close-btn:hover {
+#nna-chatbot-container .chatbot-close-btn:hover {
     opacity: 1;
 }
 
-.chatbot-body {
+#nna-chatbot-container .chatbot-body {
     padding: 1rem;
     overflow-y: auto;
     flex-grow: 1;
@@ -301,7 +304,7 @@ body {
     background-color: #f9f9f9;
 }
 
-.chatbot-message {
+#nna-chatbot-container .chatbot-message {
     padding: 10px 15px;
     border-radius: 18px;
     max-width: 85%;
@@ -314,7 +317,7 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-.chatbot-message.assistant {
+#nna-chatbot-container .chatbot-message.assistant {
     background-color: #ffffff;
     color: #333;
     align-self: flex-start;
@@ -322,14 +325,14 @@ body {
     border: 1px solid #eee;
 }
 
-.chatbot-message.user {
+#nna-chatbot-container .chatbot-message.user {
     background-color: var(--bs-primary);
     color: white;
     align-self: flex-end;
     border-bottom-right-radius: 4px;
 }
 
-.chatbot-footer {
+#nna-chatbot-container .chatbot-footer {
     display: flex;
     padding: 1rem;
     border-top: 1px solid #eee;
@@ -339,7 +342,7 @@ body {
     border-bottom-right-radius: 20px;
 }
 
-#chatbot-input {
+#nna-chatbot-container #chatbot-input {
     flex-grow: 1;
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -347,12 +350,12 @@ body {
     transition: border-color 0.3s ease;
     width: 100%;
 }
-#chatbot-input:focus {
+#nna-chatbot-container #chatbot-input:focus {
     outline: none;
     border-color: var(--bs-primary);
 }
 
-#chatbot-send-btn {
+#nna-chatbot-container #chatbot-send-btn {
     background-color: var(--bs-primary);
     color: white;
     border: none;
@@ -370,7 +373,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-#chatbot-send-btn:hover {
+#nna-chatbot-container #chatbot-send-btn:hover {
     background-color: color-mix(in srgb, var(--bs-primary), black 10%);
 }
 
