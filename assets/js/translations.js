@@ -59,7 +59,14 @@ async function setupFooter() {
 document.addEventListener("DOMContentLoaded", async function() {
 
     await setupFooter(); // Load footer first
-    await changeLanguage('es'); // Load default language and translate
+
+    // Set English as default, switch to Spanish if browser is Spanish
+    const userLang = navigator.language || navigator.userLanguage; 
+    let defaultLang = 'en'; // Default to English
+    if (userLang.startsWith('es')) {
+        defaultLang = 'es'; // If browser is Spanish, use Spanish
+    }
+    await changeLanguage(defaultLang); // Load detected or default language
 
     // Initialize Swiper (only if the element exists)
     if (document.querySelector('.mySwiper')) {
