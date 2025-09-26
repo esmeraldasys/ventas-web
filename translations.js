@@ -118,12 +118,11 @@ const translations = {
 };
 
 const changeLanguage = (lang) => {
-  localStorage.setItem('language', lang); // Guarda el idioma seleccionado
+  localStorage.setItem('language', lang);
   
   document.querySelectorAll('[data-key]').forEach(element => {
     const key = element.getAttribute('data-key');
-    if (translations[lang][key]) {
-      // Si es un input o textarea, cambia el placeholder
+    if (translations[lang] && translations[lang][key]) {
       if(element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
         element.placeholder = translations[lang][key];
       } else {
@@ -132,19 +131,29 @@ const changeLanguage = (lang) => {
     }
   });
   
-  // Cambia el atributo lang del HTML
   document.documentElement.lang = lang;
 };
 
-// Al cargar la página, comprueba si hay un idioma guardado o detecta el del navegador
+// Se ejecuta cuando el contenido de la página se ha cargado
 document.addEventListener('DOMContentLoaded', () => {
-  let savedLang = localStorage.getItem('language');
+  let initialLang = localStorage.getItem('language');
 
-  if (!savedLang) {
-    const browserLang = navigator.language || navigator.userLanguage;
-    savedLang = browserLang.startsWith('en') ? 'en' : 'es';
+  // Si no hay un idioma guardado, detecta el del navegador
+  if (!initialLang) {
+    // Obtiene el idioma del navegador (ej: 'en-US', 'es-MX', etc.)
+    const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    
+    // MENSAJE DE DEPURACIÓN: Puedes verlo en la consola (F12)
+    console.log(`Browser language detected: ${browserLang}`);
+    
+    // LÓGICA CORREGIDA: Inglés por defecto, español solo si se detecta 'es'
+    initialLang = browserLang.startsWith('es') ? 'es' : 'en';
+    
+    console.log(`No saved language found. Setting language to: ${initialLang}`);
+  } else {
+    console.log(`Language loaded from previous session: ${initialLang}`);
   }
   
-  changeLanguage(savedLang);
+  changeLanguage(initialLang);
 });
 
