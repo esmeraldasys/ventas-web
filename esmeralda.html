@@ -85,18 +85,15 @@
                                 <p class="text-muted small"><i class="fas fa-phone"></i> +52 555 123 4567</p>
                             </div>
                             <hr>
-                            <form id="contactForm" class="needs-validation" novalidate>
+                            <form id="contactForm" novalidate>
                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre Completo" required>
-                                    <label for="nombre" data-key="form.name"></label>
+                                    <input type="text" class="form-control" id="nombre" required data-key="form.name" placeholder=" ">
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="email" placeholder="Correo Electrónico" required>
-                                    <label for="email" data-key="form.email"></label>
+                                    <input type="email" class="form-control" id="email" required data-key="form.email" placeholder=" ">
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <textarea class="form-control" id="mensaje" placeholder="Mensaje" style="height: 100px" required></textarea>
-                                    <label for="mensaje" data-key="form.message"></label>
+                                    <textarea class="form-control" id="mensaje" style="height: 100px" required data-key="form.message" placeholder=" "></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary w-100" data-key="buttons.sendMessage"></button>
                             </form>
@@ -108,7 +105,7 @@
         </section>
     </main>
 
-    <footer id="footer-placeholder" class="bg-dark text-white text-center py-4"></footer>
+    <footer id="footer-placeholder"></footer>
     
     <!-- INICIO DEL CÓDIGO DEL CHATBOT -->
     <div id="nna-chatbot-container" class="chatbot-container">
