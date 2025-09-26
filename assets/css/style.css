@@ -4,9 +4,11 @@
 
 /* Tema por defecto: NNA Luxury (Dorado y Azul Noche) */
 .theme-nna {
-    --bs-primary: #d4af37; 
+    --bs-primary: #c5a47e; /* Un dorado más sutil */
     --bs-secondary: #0a2d4d;
-    --bs-primary-rgb: 212, 175, 55;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 197, 164, 126;
     --bs-secondary-rgb: 10, 45, 77;
 }
 
@@ -14,6 +16,8 @@
 .theme-esmeralda {
     --bs-primary: #009B77;
     --bs-secondary: #00425A;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
     --bs-primary-rgb: 0, 155, 119;
     --bs-secondary-rgb: 0, 66, 90;
 }
@@ -22,6 +26,8 @@
 .theme-casablanca {
     --bs-primary: #4CAF50;
     --bs-secondary: #0077C0;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
     --bs-primary-rgb: 76, 175, 80;
     --bs-secondary-rgb: 0, 119, 192;
 }
@@ -30,25 +36,36 @@
    ESTILOS GENERALES
    ========================================= */
 body {
-    padding-top: 56px; 
+    padding-top: 70px; /* Aumenta el padding para la barra de navegación fija */
     font-family: 'Montserrat', sans-serif;
+    background-color: var(--bs-light);
+}
+
+.object-cover {
+    object-fit: cover;
 }
 
 /* =========================================
-   ESTILOS DE COMPONENTES DE BOOTSTRAP (Usan las variables de tema)
+   COMPONENTES DE BOOTSTRAP PERSONALIZADOS
    ========================================= */
+.btn {
+    transition: all 0.3s ease;
+}
+
 .btn-primary {
     --bs-btn-bg: var(--bs-primary);
     --bs-btn-border-color: var(--bs-primary);
-    --bs-btn-hover-bg: color-mix(in srgb, var(--bs-primary), black 10%);
-    --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-primary), black 10%);
+    --bs-btn-hover-bg: color-mix(in srgb, var(--bs-primary), black 15%);
+    --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-primary), black 20%);
+    --bs-btn-active-bg: color-mix(in srgb, var(--bs-primary), black 20%);
+    --bs-btn-active-border-color: color-mix(in srgb, var(--bs-primary), black 25%);
 }
 
 .btn-secondary {
     --bs-btn-bg: var(--bs-secondary);
     --bs-btn-border-color: var(--bs-secondary);
-    --bs-btn-hover-bg: color-mix(in srgb, var(--bs-secondary), black 10%);
-    --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-secondary), black 10%);
+    --bs-btn-hover-bg: color-mix(in srgb, var(--bs-secondary), white 15%);
+    --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-secondary), white 20%);
 }
 
 .btn-outline-primary {
@@ -59,14 +76,37 @@ body {
     --bs-btn-hover-color: #fff;
 }
 
+.navbar-brand {
+    color: var(--bs-secondary) !important;
+}
+
+.nav-link.active {
+    color: var(--bs-primary) !important;
+    font-weight: 600;
+}
+
 .property-price {
     color: var(--bs-primary);
+    font-size: 1.25rem;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    transform: translateY(-8px);
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1)!important;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
 }
 
 .text-primary {
@@ -78,10 +118,11 @@ body {
 }
 
 /* =========================================
-   ESTILOS DE LA SECCIÓN HERO (SWIPER)
+   SECCIÓN HERO (SWIPER)
    ========================================= */
 .hero-section {
-    height: 90vh;
+    height: calc(100vh - 70px);
+    max-height: 800px;
     width: 100%;
 }
 
@@ -99,20 +140,21 @@ body {
 }
 
 .hero-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
+    background: rgba(10, 45, 77, 0.6); /* Usando el azul secundario con transparencia */
+    padding: 2rem 3rem;
     border-radius: 0.5rem;
     max-width: 90%;
+    backdrop-filter: blur(5px);
 }
 
 /* =========================================
-   ICONOS DE AMENIDADES MEJORADOS
+   ICONOS DE AMENIDADES
    ========================================= */
 .amenity-icon-wrapper {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: rgba(var(--bs-secondary-rgb), 0.1);
+    background-color: rgba(var(--bs-secondary-rgb), 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,3 +175,16 @@ body {
     color: #fff;
 }
 
+/* =========================================
+   FOOTER
+   ========================================= */
+.social-icons a {
+    color: var(--bs-light);
+    font-size: 1.25rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--bs-primary);
+}

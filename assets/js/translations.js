@@ -17,15 +17,15 @@ async function changeLanguage(lang) {
     }
 }
 
-// Function to translate the page
+// Function to translate the page, including placeholders
 function translatePage() {
     document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.getAttribute('data-key');
         const translation = getTranslation(key);
         if (translation) {
-            // If the element is an input or textarea, use the placeholder
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = translation;
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA' || element.tagName === 'LABEL') {
+                if(element.placeholder !== undefined) element.placeholder = translation;
+                if(element.tagName === 'LABEL') element.textContent = translation;
             } else {
                 element.innerHTML = translation;
             }
@@ -38,8 +38,28 @@ function getTranslation(key) {
     return key.split('.').reduce((obj, i) => (obj ? obj[i] : null), translations);
 }
 
+
+// Function to inject and setup footer
+async function setupFooter() {
+    try {
+        const response = await fetch('assets/components/_footer.html');
+        if(!response.ok) return;
+        const footerHTML = await response.text();
+        const footerPlaceholder = document.getElementById('footer-placeholder');
+        if(footerPlaceholder) {
+            footerPlaceholder.innerHTML = footerHTML;
+        }
+    } catch (error) {
+        console.error('Could not load footer:', error);
+    }
+}
+
+
 // This function runs once the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", async function() {
+
+    await setupFooter(); // Load footer first
+    await changeLanguage('es'); // Load default language and translate
 
     // Initialize Swiper (only if the element exists)
     if (document.querySelector('.mySwiper')) {
@@ -91,7 +111,5 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(() => { feedbackDiv.innerHTML = ''; }, 5000);
         });
     }
-    
-    // Load the default language on startup
-    changeLanguage('es');
 });
+

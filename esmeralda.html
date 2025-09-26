@@ -21,13 +21,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" />
     
     <!-- Fuentes y Estilos Personalizados -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"></noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="theme-esmeralda">
 
-    <header>
+    <header id="header-placeholder">
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
             <div class="container">
                 <a class="navbar-brand fw-bold text-secondary" href="index.html">ESMERALDA BEACH RESORT</a>
@@ -63,13 +64,17 @@
     <main class="main-content">
         <div class="container py-5" data-aos="fade-in">
             <div id="lightgallery" class="row g-2">
-                <a href="assets/images/developments/esmeralda/IMG_8393_5_6_7_8_9-1.jpg" class="col-12">
-                    <img src="assets/images/developments/esmeralda/IMG_8393_5_6_7_8_9-1.jpg" alt="Vista principal de la propiedad Esmeralda" class="img-fluid rounded shadow-sm w-100" loading="lazy">
+                <a href="assets/images/developments/esmeralda/IMG_8393_5_6_7_8_9-1.jpg" class="col-md-8">
+                    <img src="assets/images/developments/esmeralda/IMG_8393_5_6_7_8_9-1.jpg" alt="Vista principal desde el balcón en Esmeralda" class="img-fluid rounded shadow-sm w-100 h-100 object-cover" loading="lazy">
                 </a>
-                <a href="assets/images/developments/esmeralda/IMG_7857-Edit-2.jpg" class="col-3"><img src="assets/images/developments/esmeralda/IMG_7857-Edit-2.jpg" alt="Sala de estar del condominio Esmeralda" class="img-fluid rounded shadow-sm" loading="lazy"></a>
-                <a href="assets/images/developments/esmeralda/IMG_4168-Edit.jpg" class="col-3"><img src="assets/images/developments/esmeralda/IMG_4168-Edit.jpg" alt="Cocina moderna del condominio Esmeralda" class="img-fluid rounded shadow-sm" loading="lazy"></a>
-                <a href="assets/images/developments/esmeralda/IMG_8222.jpg" class="col-3"><img src="assets/images/developments/esmeralda/IMG_8222.jpg" alt="Habitación principal del condominio Esmeralda" class="img-fluid rounded shadow-sm" loading="lazy"></a>
-                <a href="assets/images/developments/esmeralda/IMG_7821_5_6_7.jpg" class="col-3"><img src="assets/images/developments/esmeralda/IMG_7821_5_6_7.jpg" alt="Baño elegante del condominio Esmeralda" class="img-fluid rounded shadow-sm" loading="lazy"></a>
+                 <a href="assets/images/developments/esmeralda/IMG_4168-Edit.jpg" class="col-md-4">
+                    <img src="assets/images/developments/esmeralda/IMG_4168-Edit.jpg" alt="Cocina de lujo en Esmeralda" class="img-fluid rounded shadow-sm w-100 h-100 object-cover" loading="lazy">
+                </a>
+                <a href="assets/images/developments/esmeralda/IMG_7857-Edit-2.jpg" class="col-md-4"><img src="assets/images/developments/esmeralda/IMG_7857-Edit-2.jpg" alt="Comedor con vista al mar" class="img-fluid rounded shadow-sm" loading="lazy"></a>
+                <a href="assets/images/developments/esmeralda/IMG_8222.jpg" class="col-md-4"><img src="assets/images/developments/esmeralda/IMG_8222.jpg" alt="Habitación principal con baño ensuite" class="img-fluid rounded shadow-sm" loading="lazy"></a>
+                <a href="assets/images/developments/esmeralda/IMG_2142-scaled.jpg" class="col-md-4"><img src="assets/images/developments/esmeralda/IMG_2142-scaled.jpg" alt="Alberca y áreas comunes" class="img-fluid rounded shadow-sm" loading="lazy"></a>
+                <a href="assets/images/developments/esmeralda/gym1.jpg" class="col-md-4 d-none"></a>
+                <a href="assets/images/developments/esmeralda/280485899_145627974696065_5060005468839578543_n.jpg" class="col-md-4 d-none"></a>
             </div>
         </div>
 
@@ -93,33 +98,36 @@
                         
                         <div class="amenities">
                             <h2 class="h4 fw-bold text-secondary" data-key="propertyPage.amenities.title"></h2>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="propertyPage.amenities.pool"></span></li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="propertyPage.amenities.garden"></span></li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="propertyPage.amenities.security"></span></li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="propertyPage.amenities.ac"></span></li>
+                            <ul class="list-unstyled row">
+                                <li class="mb-2 col-md-6"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="propertyPage.amenities.pool"></span></li>
+                                <li class="mb-2 col-md-6"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="propertyPage.amenities.garden"></span></li>
+                                <li class="mb-2 col-md-6"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="propertyPage.amenities.security"></span></li>
+                                <li class="mb-2 col-md-6"><i class="fas fa-check-circle text-primary me-2"></i> <span data-key="propertyPage.amenities.ac"></span></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="col-lg-4" id="formulariocontacto">
-                        <aside class="card shadow-sm border-0 p-4 sticky-top" style="top: 80px;">
+                        <aside class="card shadow-sm border-0 p-4 sticky-top" style="top: 100px;">
                             <div class="text-center">
-                                <img src="https://placehold.co/100x100/00425A/FFF?text=Agente" alt="Foto del Agente" class="rounded-circle mb-3" loading="lazy">
+                                <img src="https://placehold.co/100x100/00425A/FFF?text=AG" alt="Foto del Agente Ana García" class="rounded-circle mb-3" loading="lazy">
                                 <h3 class="h5 mb-1 text-secondary" data-key="propertyPage.agentCard.title"></h3>
                                 <p class="mb-1"><strong>Ana García</strong></p>
-                                <p class="text-muted small"><i class="fas fa-phone"></i> +1 234 567 890</p>
+                                <p class="text-muted small"><i class="fas fa-phone"></i> +52 555 123 4567</p>
                             </div>
                             <hr>
-                            <form id="contactForm">
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" required data-key="form.name" placeholder="Nombre Completo">
+                            <form id="contactForm" class="needs-validation" novalidate>
+                               <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="nombre" required data-key="form.name">
+                                    <label for="nombre" data-key="form.name"></label>
                                 </div>
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" required data-key="form.email" placeholder="Correo Electrónico">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="email" required data-key="form.email">
+                                    <label for="email" data-key="form.email"></label>
                                 </div>
-                                <div class="mb-3">
-                                    <textarea class="form-control" rows="4" required data-key="form.message" placeholder="Mensaje"></textarea>
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" id="mensaje" style="height: 100px" required data-key="form.message"></textarea>
+                                    <label for="mensaje" data-key="form.message"></label>
                                 </div>
                                 <button type="submit" class="btn btn-primary w-100" data-key="buttons.sendMessage"></button>
                             </form>
@@ -131,14 +139,7 @@
         </section>
     </main>
 
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-             <p class="mb-1 fw-bold">NNA LUXURY</p>
-            <p class="mb-1" data-key="footer.address"></p>
-            <p class="mb-2" data-key="footer.contact"></p>
-            <p class="mb-0 small" data-key="footer.rights"></p>
-        </div>
-    </footer>
+    <footer id="footer-placeholder" class="bg-dark text-white text-center py-4"></footer>
 
     <!-- Librerías JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -150,3 +151,4 @@
 
 </body>
 </html>
+
