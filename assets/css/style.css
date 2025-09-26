@@ -118,11 +118,11 @@ body {
 }
 
 /* =========================================
-   SECCIÓN HERO (SWIPER)
+   SECCIÓN HERO (SWIPER) - AJUSTE DE ALTURA
    ========================================= */
 .hero-section {
-    height: calc(100vh - 70px);
-    max-height: 800px;
+    height: 90vh; /* Ocupa el 90% de la altura de la pantalla */
+    max-height: 720px; /* Altura máxima para pantallas muy grandes */
     width: 100%;
 }
 
@@ -188,3 +188,4 @@ body {
 .social-icons a:hover {
     color: var(--bs-primary);
 }
+
