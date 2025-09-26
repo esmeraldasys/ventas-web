@@ -7,10 +7,10 @@
     <meta name="description" content="Descubra Casa Blanca Golf & Villas. Propiedades exclusivas con 2 habitaciones y 2 baños en una de las zonas más prestigiosas de Puerto Peñasco.">
 
     <!-- Favicons -->
-    <link rel="icon" href="imagenes/favicon/favicon.ico" sizes="any">
-    <link rel="icon" href="imagenes/favicon/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="imagenes/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="imagenes/favicon/site.webmanifest">
+    <link rel="icon" href="assets/images/ui/favicon.ico" sizes="any">
+    <link rel="icon" href="assets/images/ui/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/images/ui/apple-touch-icon.png">
+    <link rel="manifest" href="assets/images/ui/site.webmanifest">
 
     <!-- Librerías CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
     <!-- Fuentes y Estilos Personalizados -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"></noscript>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="theme-casablanca">
 
@@ -39,8 +39,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.html" data-key="nav.home"></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-key="nav.agents"></a>
+                         <li class="nav-item">
+                            <a class="nav-link" href="index.html#propiedades" data-key="nav.properties"></a>
                         </li>
                         <li class="nav-item mt-2 mt-lg-0">
                             <a class="nav-link btn btn-outline-primary ms-lg-2 px-3" href="#formulariocontacto" data-key="nav.contact"></a>
@@ -63,13 +63,13 @@
     <main class="main-content">
         <div class="container py-5" data-aos="fade-in">
             <div id="lightgallery" class="row g-2">
-                <a href="imagenes/moderno.jpg" class="col-12">
-                    <img src="imagenes/moderno.jpg" alt="Vista principal de la propiedad en Casa Blanca" class="img-fluid rounded shadow-sm w-100" loading="lazy">
+                <a href="assets/images/developments/casa_blanca/casa-blanca-golf-villas-slide1-1.jpg" class="col-12">
+                    <img src="assets/images/developments/casa_blanca/casa-blanca-golf-villas-slide1-1.jpg" alt="Vista principal de la propiedad en Casa Blanca" class="img-fluid rounded shadow-sm w-100" loading="lazy">
                 </a>
-                <a href="imagenes/condosala.jpg" class="col-3"><img src="imagenes/condosala.jpg" alt="Sala de estar del condominio Casa Blanca" class="img-fluid rounded shadow-sm" loading="lazy"></a>
-                <a href="imagenes/condococina.jpg" class="col-3"><img src="imagenes/condococina.jpg" alt="Cocina moderna del condominio Casa Blanca" class="img-fluid rounded shadow-sm" loading="lazy"></a>
-                <a href="imagenes/condohabitacion.jpg" class="col-3"><img src="imagenes/condohabitacion.jpg" alt="Habitación principal del condominio Casa Blanca" class="img-fluid rounded shadow-sm" loading="lazy"></a>
-                <a href="imagenes/condobaño.jpg" class="col-3"><img src="imagenes/condobaño.jpg" alt="Baño elegante del condominio Casa Blanca" class="img-fluid rounded shadow-sm" loading="lazy"></a>
+                <a href="assets/images/developments/casa_blanca/original_165451577-1536x1024-1.jpeg" class="col-3"><img src="assets/images/developments/casa_blanca/original_165451577-1536x1024-1.jpeg" alt="Sala de estar del condominio Casa Blanca" class="img-fluid rounded shadow-sm" loading="lazy"></a>
+                <a href="assets/images/developments/casa_blanca/5-Web.png" class="col-3"><img src="assets/images/developments/casa_blanca/5-Web.png" alt="Cocina moderna del condominio Casa Blanca" class="img-fluid rounded shadow-sm" loading="lazy"></a>
+                <a href="assets/images/developments/casa_blanca/original_165298742-1536x1152-1.jpg" class="col-3"><img src="assets/images/developments/casa_blanca/original_165298742-1536x1152-1.jpg" alt="Habitación principal del condominio Casa Blanca" class="img-fluid rounded shadow-sm" loading="lazy"></a>
+                <a href="assets/images/developments/casa_blanca/4.png" class="col-3"><img src="assets/images/developments/casa_blanca/4.png" alt="Baño elegante del condominio Casa Blanca" class="img-fluid rounded shadow-sm" loading="lazy"></a>
             </div>
         </div>
 
@@ -105,7 +105,7 @@
                     <div class="col-lg-4" id="formulariocontacto">
                         <aside class="card shadow-sm border-0 p-4 sticky-top" style="top: 80px;">
                             <div class="text-center">
-                                <img src="https://via.placeholder.com/100" alt="Foto del Agente" class="rounded-circle mb-3" loading="lazy">
+                                <img src="https://placehold.co/100x100/0077C0/FFF?text=Agente" alt="Foto del Agente" class="rounded-circle mb-3" loading="lazy">
                                 <h3 class="h5 mb-1 text-secondary" data-key="propertyPage.agentCard.title"></h3>
                                 <p class="mb-1"><strong>John Doe</strong></p>
                                 <p class="text-muted small"><i class="fas fa-phone"></i> +1 987 654 321</p>
@@ -133,7 +133,10 @@
 
     <footer class="bg-dark text-white text-center py-4">
         <div class="container">
-            <p class="mb-2" data-key="footer.rights"></p>
+             <p class="mb-1 fw-bold">NNA LUXURY</p>
+            <p class="mb-1" data-key="footer.address"></p>
+            <p class="mb-2" data-key="footer.contact"></p>
+            <p class="mb-0 small" data-key="footer.rights"></p>
         </div>
     </footer>
 
@@ -143,39 +146,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js"></script>
-    <script src="translations.js"></script>
+    <script src="assets/js/translations.js"></script>
     
-    <!-- Script de Inicialización -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            AOS.init({
-                duration: 800, 
-                once: true,    
-            });
-
-            if (document.getElementById('lightgallery')) {
-                lightGallery(document.getElementById('lightgallery'), {
-                    plugins: [lgZoom, lgThumbnail],
-                    speed: 500,
-                    download: false
-                });
-            }
-
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const feedbackDiv = document.getElementById('form-feedback');
-                    const successMessage = document.documentElement.lang === 'es' 
-                        ? '¡Gracias! Tu mensaje ha sido enviado.' 
-                        : 'Thank you! Your message has been sent.';
-                    feedbackDiv.innerHTML = `<div class="alert alert-success">${successMessage}</div>`;
-                    contactForm.reset();
-                    setTimeout(() => { feedbackDiv.innerHTML = ''; }, 5000);
-                });
-            }
-        });
-    </script>
 </body>
 </html>
-
